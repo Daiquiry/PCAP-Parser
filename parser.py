@@ -35,12 +35,12 @@ class pcapHandler:
 
 if __name__ == '__main__':
     start = datetime.datetime.now() ## set start time to review performance
-    handler = pcapHandler('australia.pcap') ## Set pcap file to examine
+    handler = pcapHandler('<FILENAME>') ## Set pcap file to examine
     handler.iteratePcap() ## interate all packets in a pcap
 ##    index = 0
 ##    while index < len(handler.auxArray):
 ####        handler.getPacket(index) ## read each packet
 ##        index +=1
-    handler.findString('==') ## find a specific string in all packets
+    handler.findString('<STRINGTOFIND>') ## find a specific string in all packets
     end = datetime.datetime.now() ## set end time to review performance
     print(end-start)
